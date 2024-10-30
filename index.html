@@ -6,17 +6,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
- 
-    <title>South Park Studios Mockup!</title>
+    <title>South Park Clone</title>
+
+    <style>
+      /* Custom styles */
+      .jumbotron-custom {
+        position:relative;
+        color: white;
+        padding: 100px 0;
+        overflow: hidden;
+      }
+
+      .jumbotron-custom video{
+        position:absolute;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        transform: (-50%, -50%);
+        filter: brightness(0.5);
+      }
+
+      .episode-card img {
+        height: 200px;
+        object-fit: cover;
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-dark text-light">
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand mx-auto" href="#"><img src="images/southpark_logo.png" alt="South Park Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Full Episodes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Concert</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Avatar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Forum</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">More</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Hero Section -->
+    <section class="jumbotron-custom">
+      <video autoplay loop muted playsinline style="height: 50px;">
+        <source src="videos/southpark_trick_or_treat.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <button class="btn btn-primary btn-lg">Watch Now</button>
+      </div>
+    </section>
 
+    <!-- Episode Grid -->
+<section class="container mt-5">
+  <h2 class="text-center mb-4">Free Episodes</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Episode Card 1 -->
+    <div class="col">
+      <div class="card bg-secondary text-light episode-card">
+        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Episode Thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">Episode Title</h5>
+          <p class="card-text">Description of the episode goes here. Brief and engaging.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Episode Card 2 -->
+    <div class="col">
+      <div class="card bg-secondary text-light episode-card">
+        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Episode Thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">Episode Title</h5>
+          <p class="card-text">Description of the episode goes here. Brief and engaging.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Episode Card 3 -->
+    <div class="col">
+      <div class="card bg-secondary text-light episode-card">
+        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Episode Thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">Episode Title</h5>
+          <p class="card-text">Description of the episode goes here. Brief and engaging.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Episode Card 4 -->
+    <div class="col">
+      <div class="card bg-secondary text-light episode-card">
+        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Episode Thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">Episode Title</h5>
+          <p class="card-text">Description of the episode goes here. Brief and engaging.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-center py-4 mt-5">
+  <p>&copy; 2023 South Park Clone. All rights reserved.</p>
+  <p>
+    <a href="#" class="text-light">Privacy Policy</a> |
+    <a href="#" class="text-light">Terms of Use</a> |
+    <a href="#" class="text-light">Contact Us</a>
+  </p>
+</footer>
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
